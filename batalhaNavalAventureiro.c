@@ -11,6 +11,10 @@ int main() {
     // Navio horizontal: [linha1, coluna1, linha2, coluna2, ...]
     int navio_horizontal[8] = {5, 0, 5, 1, 5, 2, 5, 3}; // O valor da linha é constante (5) e as colunas variam
 
+    int navio_diagonal1[6] = {7, 3, 8, 4, 9, 5};
+
+    int navio_diagonal2[6] = {3, 4, 2, 5, 1, 6};
+
      // Posiciona o navio vertical (valor 3)
     for (int i = 0; i < 6; i += 2) {
         int linha = navio_vertical[i]; // Observe que serão lidas as posições 0, 2 e 4 do vetor
@@ -25,8 +29,20 @@ int main() {
         tabuleiro[linha][coluna] = 3;
     }
 
+    // Posiciona o navio diagonal 1 (valor 3)
+    for (int i = 0; i < 6; i += 2) {
+        int linha = navio_diagonal1[i]; // Observe que serão lidas as posições 0, 2 e 4 do vetor
+        int coluna = navio_diagonal1[i + 1]; // Observe que serão lidas as posições 1, 3 e 5 do vetor
+        tabuleiro[linha][coluna] = 3;
+    }
 
-    
+    // Posiciona o navio diagonal 2 (valor 3)
+    for (int i = 0; i < 6; i += 2) {
+        int linha = navio_diagonal2[i]; // Observe que serão lidas as posições 0, 2 e 4 do vetor
+        int coluna = navio_diagonal2[i + 1]; // Observe que serão lidas as posições 1, 3 e 5 do vetor
+        tabuleiro[linha][coluna] = 3;
+    }
+
     // Exibe a matriz do tabuleiro
     printf("Tabuleiro Atualizado:\n");
     for (int i = 0; i < 10; i++) {
