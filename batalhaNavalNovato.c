@@ -24,8 +24,6 @@ int main() {
         int coluna = navio_horizontal[i + 1]; // Observe que serão lidas as posições 1, 3, 5 e 7 do vetor
         tabuleiro[linha][coluna] = 3;
     }
-
-
     
     // Exibe a matriz do tabuleiro
     printf("Tabuleiro Atualizado:\n");
